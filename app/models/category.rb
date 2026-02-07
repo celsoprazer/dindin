@@ -2,7 +2,8 @@ class Category < ApplicationRecord
   has_many :transactions, dependent: :destroy
 
   def total_spent_this_month
-    transactions.expense
+    transactions.confirmed
+                .expense
                 .where(date: Date.today.all_month)
                 .sum(:amount)
   end
