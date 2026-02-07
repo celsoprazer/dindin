@@ -1,0 +1,17 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+$primary: #2d5cf7; 
+$body-bg: #f8f9fa;
+
+@import "bootstrap/scss/bootstrap";
+
+.card {
+  transition: transform 0.2s;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
